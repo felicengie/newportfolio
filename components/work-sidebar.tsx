@@ -34,7 +34,7 @@ export function WorkSidebar({ activeTab, onTabChange }: WorkSidebarProps) {
   return (
     <div className="w-80 bg-white border-r border-gray-200 p-8">
       <div className="mb-8">
-        <h1 className="text-3xl font-bold text-gray-900 mb-2">Felice</h1>
+        <h1 className="text-3xl font-bold text-gray-900 mb-2">Felice Chandra</h1>
         <p className="text-gray-600 text-lg">a technical thinker with a creative mind</p>
       </div>
       

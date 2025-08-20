@@ -67,7 +67,7 @@ export function ContactForm() {
             <Textarea
               id="message"
               name="message"
-              placeholder="Tell me about your project or just say hello!"
+              placeholder="say hello!"
               rows={5}
               value={formData.message}
               onChange={handleChange}

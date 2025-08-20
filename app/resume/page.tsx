@@ -13,10 +13,10 @@ export default function ResumePage() {
             <h1 className="text-4xl md:text-5xl font-black text-foreground">
               My <span className="text-primary">Resume</span>
             </h1>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            {/* <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
               A comprehensive overview of my education, experience, and technical skills in computer science and data
               science.
-            </p>
+            </p> */}
           </div>
 
           <div className="space-y-8">
