@@ -14,7 +14,7 @@ export function ValuesSection() {
             </div>
             <h3 className="text-xl font-bold text-foreground">Curiosity</h3>
             <p className="text-muted-foreground leading-relaxed">
-              Always asking questions and seeking to understand the 'why' behind every problem and solution.
+              Always asking questions and seeking to understand the &apos;why&apos; behind every problem and solution.
             </p>
           </div>
 
@@ -24,7 +24,7 @@ export function ValuesSection() {
             </div>
             <h3 className="text-xl font-bold text-foreground">Impact</h3>
             <p className="text-muted-foreground leading-relaxed">
-              Building solutions that make a real difference in people's lives and contribute to positive change.
+              Building solutions that make a real difference in people&apos;s lives and contribute to positive change.
             </p>
           </div>
 
