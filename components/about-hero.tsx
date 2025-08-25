@@ -12,7 +12,7 @@ export function AboutHero() {
   }
 
   return (
-    <section className="min-h-screen relative" style={{ backgroundColor: "#f7e1d7" }}>
+    <section className="min-h-screen relative" style={{ backgroundColor: "#1e1e1e" }}>
       {/* Main content container */}
       <div className="relative h-screen flex items-center justify-between px-8 lg:px-16 pt-20">
         {/* Center - Large ABOUT ME text */}
@@ -20,7 +20,7 @@ export function AboutHero() {
           <h1
             className="text-[84px] md:text-[132px] lg:text-[180px] xl:text-[212px] font-black leading-none select-none opacity-90"
             style={{
-              color: "#8B7355",
+              color: "#ffffff",
               fontFamily: "'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif",
               fontWeight: 900,
               wordSpacing: "100px",

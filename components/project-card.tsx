@@ -28,7 +28,6 @@ export function ProjectCard({
   techStack,
   image,
   githubUrl,
-  demoUrl,
   figmaUrl,
 }: ProjectCardProps) {
   return (
@@ -88,13 +87,6 @@ export function ProjectCard({
               <Button asChild size="sm" variant="outline">
                 <Link href={githubUrl} target="_blank" rel="noopener noreferrer">
                   GitHub
-                </Link>
-              </Button>
-            )}
-            {demoUrl && (
-              <Button asChild size="sm" className="bg-primary hover:bg-primary/90">
-                <Link href={demoUrl} target="_blank" rel="noopener noreferrer">
-                  Live Demo
                 </Link>
               </Button>
             )}

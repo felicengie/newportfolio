@@ -55,16 +55,12 @@ export default function ResumePage() {
                     <div>
                       <h3 className="font-semibold text-foreground">Bachelor of Science in Computer Science</h3>
                       <p className="text-muted-foreground">Stony Brook University</p>
-                      <p className="text-sm text-muted-foreground">Expected Graduation: May 2025</p>
-                      <p className="text-sm text-muted-foreground">
-                        Relevant Coursework: OOP, Data Structures, Algorithms, Pipelining, Statistics, Scripting,
-                        Software Security
-                      </p>
+                      <p className="text-sm text-muted-foreground">January 2023 - May 2025 (Graduated)</p>
                     </div>
                     <div>
                       <h3 className="font-semibold text-foreground">Associate of Science in Computer Science</h3>
                       <p className="text-muted-foreground">Shoreline Community College</p>
-                      <p className="text-sm text-muted-foreground">June 2022 • Presidents List</p>
+                      <p className="text-sm text-muted-foreground">September 2020 - June 2022 (Graduated)</p>
                     </div>
                   </div>
                 </CardContent>
@@ -79,7 +75,7 @@ export default function ResumePage() {
                     <div>
                       <h4 className="font-medium text-foreground">Programming Languages</h4>
                       <p className="text-sm text-muted-foreground">
-                        Python, Java, C++, C, Ruby, OCaml, R, JavaScript, Swift, HTML, CSS, SQL
+                        Python, Java, C, JavaScript, Swift, HTML, CSS, SQL
                       </p>
                     </div>
                     <div>
