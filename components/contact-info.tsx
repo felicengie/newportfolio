@@ -19,8 +19,7 @@ export function ContactInfo() {
         <CardContent className="p-6 space-y-4">
           <h3 className="text-xl font-bold text-foreground">Get in touch</h3>
           <p className="text-muted-foreground leading-relaxed">
-            I&apos;m always open to discussing new opportunities, collaborations, or just having a chat about technology and
-            product management. Feel free to reach out!
+            I&apos;m always open to discussing new opportunities, collaborations, or just having a chat to share interests. Feel free to reach out!
           </p>
 
           <div className="space-y-3">

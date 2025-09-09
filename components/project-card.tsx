@@ -32,15 +32,18 @@ export function ProjectCard({
 }: ProjectCardProps) {
   return (
     <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 overflow-hidden">
-      <div className="relative h-64 overflow-hidden">
-        <Image
-          src={image || "/images/placeholder.svg"}
-          alt={`${title} project screenshot`}
-          fill
-          className="object-cover group-hover:scale-105 transition-transform duration-300"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-      </div>
+      {/* Only render image if it exists */}
+      {image && (
+        <div className="relative w-full h-[200px] md:h-[300px] overflow-hidden rounded-lg">
+          <Image
+            src={image}
+            alt={`${title} project screenshot`}
+            fill
+            style={{ objectFit: "contain" }}
+            sizes="100vw"
+          />
+        </div>
+      )}
 
       <CardContent className="p-6 space-y-4">
         <div className="space-y-2">

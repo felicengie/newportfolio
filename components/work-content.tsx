@@ -251,15 +251,18 @@ const renderProjectSection = (project: ProjectData) => (
       {project.image && project.image.length > 0 && (
         <div className="mt-8">
           <h2 className="text-xl font-bold text-gray-900 mb-4">Project Screenshots:</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="flex flex-col gap-6 w-full">
             {project.image.map((img, index) => (
-              <div key={index} className="relative overflow-hidden rounded-lg border border-gray-200 shadow-md">
+              <div
+                key={index}
+                className="relative w-full min-h-[300px] md:min-h-[500px] overflow-hidden rounded-lg border border-gray-200 shadow-md"
+              >
                 <Image
                   src={img}
                   alt={`${project.title} screenshot ${index + 1}`}
-                  width={600}
-                  height={400}
-                  className="object-contain w-full h-auto hover:scale-105 transition-transform duration-300"
+                  fill
+                  style={{ objectFit: "contain" }}
+                  sizes="100vw"
                 />
               </div>
             ))}
@@ -326,13 +329,16 @@ const renderWorkSection = (work: WorkData) => (
           <h2 className="text-xl font-bold text-gray-900 mb-4">Project Screenshots:</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {work.images.map((img, index) => (
-              <div key={index} className="relative overflow-hidden rounded-lg border border-gray-200 shadow-md">
+              <div
+                key={index}
+                className="relative w-full h-[700px] md:h-[900px] overflow-hidden rounded-lg border border-gray-200 shadow-md"
+              >
                 <Image
                   src={img}
                   alt={`${work.title} screenshot ${index + 1}`}
-                  width={1000}
-                  height={800}
-                  className="object-contain w-full h-auto hover:scale-105 transition-transform duration-300"
+                  fill
+                  style={{ objectFit: "contain" }}
+                  sizes="100vw"
                 />
               </div>
             ))}

@@ -1,8 +1,13 @@
 "use client"
 
+import { useEffect, useState } from "react"
 import Image from "next/image"
 
-export function AboutHero() {
+interface AboutHeroProps {
+  triggerAnimation: boolean
+}
+
+export function AboutHero({ triggerAnimation }: AboutHeroProps) {
   const handleCoffeeChat = () => {
     const subject = encodeURIComponent("Coffee Chat Request")
     const body = encodeURIComponent(
@@ -10,6 +15,15 @@ export function AboutHero() {
     )
     window.open(`mailto:chandrafelice12@gmail.com?subject=${subject}&body=${body}`)
   }
+
+    const [visible, setVisible] = useState(false)
+    useEffect(() => {
+      if (triggerAnimation) {
+        setVisible(false)  // reset
+        const timer = setTimeout(() => setVisible(true), 50)
+        return () => clearTimeout(timer)
+      }
+    }, [triggerAnimation])
 
   return (
     <section className="min-h-screen relative" style={{ backgroundColor: "#1e1e1e" }}>
@@ -33,17 +47,18 @@ export function AboutHero() {
         </div>
 
         {/* Main portrait - slightly larger and sitting between the T and M */}
-        <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 -translate-x-[88px] -translate-y-[306px] z-30">
-          <Image
-            src="/images/me.png"
-            alt="Felice Chandra"
-            width={525}
-            height={785}
-            className="object-cover"
-            priority
-          />
-        </div>
-
+        <div className="absolute left-1/2 top-1/2 z-30 transform transition-all duration-1000 ease-out"
+          style={{ transform: visible ? "translate(-15%, -40%)" : "translate(-15%, 40%)" }}>
+        <Image
+          src="/images/me.png"
+          alt="Felice Chandra"
+          width={525}
+          height={785}
+          className="object-cover"
+          priority
+        />
+      </div>
+ 
         {/* Coffee group under the O in ABOUT */}
         <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 -translate-x-[294px] translate-y-[7rem] z-20">
           <div className="relative flex flex-col items-center">
@@ -73,15 +88,15 @@ export function AboutHero() {
             <button
               type="button"
               onClick={handleCoffeeChat}
-              className="focus:outline-none"
+              className="focus:outline-none hover:animate-wiggle hover:animate-pulseScale"
               aria-label="Schedule a coffee chat"
-              style={{ transform: "translate(-70px, -40px)" }}
+              style={{ transform: "translate(-70px, -30px)" }}
             >
               <Image
                 src="/images/kittycoffee.png"
                 alt="Coffee chat kitten"
-                width={200}
-                height={200}
+                width={180}
+                height={180}
                 className="object-contain cursor-pointer"
               />
             </button>
