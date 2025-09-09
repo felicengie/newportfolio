@@ -1,3 +1,4 @@
+// components/contact-form.tsx
 "use client"
 
 import type React from "react"
@@ -16,10 +17,29 @@ export function ContactForm() {
     message: "",
   })
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission here
-    console.log("Form submitted:", formData)
+
+    try {
+      const response = await fetch("/api/contact/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      })
+
+      if (response.ok) {
+        alert("Message sent successfully!")
+        setFormData({ name: "", email: "", message: "" })
+      } else {
+        const data = await response.json()
+        alert("Failed to send message: " + (data.error || "Unknown error"))
+      }
+    } catch (error) {
+      console.error("Submit error:", error)
+      alert("Something went wrong. Please try again.")
+    }
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {

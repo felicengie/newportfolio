@@ -26,7 +26,7 @@ export default function ResumePage() {
               </CardHeader>
               <CardContent className="space-y-4">
                 <p className="text-muted-foreground leading-relaxed">
-                  Computer Science student at Stony Brook University with hands-on experience in data science and
+                  Felice is a Computer Science student graduated from Stony Brook University with hands-on experience in data science and
                   analytics. Completed internships at Memorial Sloan Kettering Cancer Center and participated in Break
                   Through Tech AI program. Passionate about mixing technology with product development, design, and
                   marketing. Aspiring product manager with strong technical foundation and leadership experience.

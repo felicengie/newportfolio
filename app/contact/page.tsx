@@ -1,3 +1,5 @@
+// app/contact/page.tsx
+
 import { Navigation } from "@/components/navigation"
 import { ContactForm } from "@/components/contact-form"
 import { ContactInfo } from "@/components/contact-info"
@@ -15,7 +17,7 @@ export default function ContactPage() {
               Let&apos;s create something <span className="text-primary">great</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              I&apos;m always excited to collaborate on new projects, discuss opportunities, or simply connect with fellow
+              I&apos;m always excited to discuss opportunities or simply connect with fellow
               tech enthusiasts. Drop me a line!
             </p>
           </div>
