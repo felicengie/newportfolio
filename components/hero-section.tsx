@@ -37,7 +37,7 @@ export function HeroSection() {
             className="text-base sm:text-lg max-w-3xl mx-auto leading-relaxed"
             style={{ color: "#4a5759", opacity: 0.8 }}
           >
-            I like to mix tech and product, I love designing and marketing as well. My target is product manager.
+            I like to mix tech and product, I love designing and marketing as well. My dream job is to be a product manager.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">

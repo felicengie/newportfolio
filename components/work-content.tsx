@@ -48,7 +48,7 @@ const projects: ProjectData[] = [
   },
   {
     id: "financial-planner",
-    title: "Lifetime Financial Planner (LFP)",
+    title: "Lifetime Financial Planner",
     summary: "Fullstack Development | Fintech | UX Design",
     what: "The challenge: Young adults often lack the tools or knowledge to make informed long-term financial decisions. Our team built LFP, a responsive financial planning web app designed to demystify budgeting, retirement planning, and life-event forecasting.",
     how: "Frontend & UI: I led frontend development using React, translating wireframes into clean, responsive UI components. I also designed in Figma to ensure alignment between the design and engineering team.\nBackend & Database: I collaborated on the backend API using Node.js and Express, setting up user data flow and integrating with MongoDB for persistent user scenarios.\nTeam Coordination: I facilitated weekly stand-ups, managed sprint boards, and contributed to feature prioritization — ensuring the app launched ahead of schedule.",
@@ -141,6 +141,18 @@ const projects: ProjectData[] = [
     techStack: ["Node.js", "Discord.js", "Axios", "Playwright", "Cron", "JavaScript"],
     image: ["/matchabot/impact1.png", "/matchabot/impact2.png"],
     githubUrl: "https://github.com/felicengie/matcha-ringer-bot"
+  },
+  {
+    id: "Crypto Price Streamer",
+    title: "Crypto Price Streamer",
+    summary: "Real-time cryptocurrency price streaming using web automation",
+    what: "Built a full-stack web application that streams live cryptocurrency prices from TradingView in real-time. Users can view an alphabetically sorted list of cryptocurrencies and their current prices.",
+    how: "Implemented a Node.js backend using Playwright to scrape TradingView data in headed mode, then streamed the data to a Next.js frontend using ConnectRPC. Managed dependencies with pnpm and used TypeScript across the stack.",
+    impact: "Provided a real-time, reliable, and visually observable price tracking tool that demonstrates proficiency in web scraping, real-time data streaming, and full-stack development.",
+    role: "Project Pluto - Fullstack Coding Assessment",
+    techStack: ["TypeScript", "Next.js", "Node.js", "Playwright", "ConnectRPC", "pnpm"],
+    image: ["/projectpluto/impact1.png"],
+    githubUrl: "https://github.com/ppluto-interviews/fullstack-coding-assessment-1--felicengie.git"
   }
 ]
 
@@ -318,8 +330,8 @@ const renderWorkSection = (work: WorkData) => (
                 <Image
                   src={img}
                   alt={`${work.title} screenshot ${index + 1}`}
-                  width={600}
-                  height={400}
+                  width={1000}
+                  height={800}
                   className="object-contain w-full h-auto hover:scale-105 transition-transform duration-300"
                 />
               </div>
