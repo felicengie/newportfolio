@@ -328,10 +328,11 @@ const renderWorkSection = (work: WorkData) => (
         <div className="mt-8">
           <h2 className="text-xl font-bold text-gray-900 mb-4">Project Screenshots:</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* <div className="flex flex-col gap-6 w-full"> or "grid grid-cols-1 md:grid-cols-2 gap-6" */}
             {work.images.map((img, index) => (
               <div
                 key={index}
-                className="relative w-full h-[700px] md:h-[900px] overflow-hidden rounded-lg border border-gray-200 shadow-md"
+                className="relative w-full min-h-[300px] md:min-h-[300px] overflow-hidden rounded-lg border border-gray-200 shadow-md"
               >
                 <Image
                   src={img}
