@@ -30,6 +30,7 @@ interface ProjectData {
   techStack: string[]
   image: string[]
   githubUrl: string
+  demoUrl?: string
 }
 
 // --------- Projects Data ---------
@@ -45,6 +46,7 @@ const projects: ProjectData[] = [
     techStack: ["Python", "Pandas", "Scikit-learn", "Hugging Face", "NLTK"],
     image: ["/coffeemachine/impact1.png", "/coffeemachine/impact2.png", "/coffeemachine/impact3.png", "/coffeemachine/impact4.png", "/coffeemachine/impact5.png", "/coffeemachine/impact6.png"],
     githubUrl: "https://github.com/felicengie/coffeshops",
+    demoUrl: "https://docs.google.com/presentation/d/1HT_YZC1p3hDsCz-C052nWBRBmZGN9oj5aAApplS2vvM/edit?usp=sharing",
   },
   {
     id: "financial-planner",
@@ -105,6 +107,7 @@ const projects: ProjectData[] = [
     techStack: ["React", "CSS", "JavaScript"],
     image: [],
     githubUrl: "https://github.com/jkyc38/hopperhacksv2",
+    demoUrl: "https://youtu.be/_n2-q_NvGxw",
   },
   {
     id: "tcp-chat",
@@ -127,7 +130,7 @@ const projects: ProjectData[] = [
     impact: "Delivered a unique AI-powered property recommendation system.\nDemonstrated fullstack development, AI integration, and multi-agent conversational design.\nEnhanced user engagement through entertaining and informative agent personas.",
     role: "Okada & Company Hackathon",
     techStack: ["Next.js", "Flask", "Tailwind", "Python", "OpenAI"],
-    image: [],
+    image: ["/realestate/sample_logs.png"],
     githubUrl: "https://github.com/jkyc38/hackathonv2/tree/main",
   },
   {
@@ -279,6 +282,16 @@ const renderProjectSection = (project: ProjectData) => (
             className="inline-flex items-center px-4 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors"
           >
             View Code →
+          </a>
+        )}
+        {project.demoUrl && (
+          <a
+            href={project.demoUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-500 transition-colors"
+          >
+            View Demo →
           </a>
         )}
       </div>
