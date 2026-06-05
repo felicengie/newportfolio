@@ -1,4 +1,7 @@
 // components/work-content.tsx
+"use client"
+
+import React from "react"
 import { ProjectCard } from "@/components/project-card"
 import Image from "next/image"
 
@@ -212,6 +215,15 @@ const techEducation: WorkData = {
   logo: "/generationgirl/GG-Logo.png"
 }
 
+// --------- Creative Portfolio Data ---------
+// Creative portfolio metadata (single PDF served from `public/creativeportfolio.pdf`)
+const creativePortfolio = {
+  id: "creative-side",
+  title: "Creative Portfolio",
+  pdf: "/creativeportfolio.pdf",
+  description: "my creative side"
+}
+
 
 // --------- Section Component ---------
 const Section = ({ title, content }: { title: string, content: React.ReactNode }) => (
@@ -378,6 +390,7 @@ const renderWorkSection = (work: WorkData) => (
 
 // --------- Main Component ---------
 export function WorkContent({ activeTab }: WorkContentProps) {
+
   if (activeTab.startsWith("project-")) {
     const projectId = activeTab.replace("project-", "")
     const selectedProject = projects.find(p => p.id === projectId)
@@ -414,8 +427,46 @@ export function WorkContent({ activeTab }: WorkContentProps) {
   if (activeTab === "applied-ai-nature") return <div className="flex-1 p-8">{renderWorkSection(appliedAINature)}</div>
   if (activeTab === "tech-education") return <div className="flex-1 p-8">{renderWorkSection(techEducation)}</div>
 
+  if (activeTab === "creative-side") {
+    const pdfSrc = creativePortfolio.pdf
+
+    return (
+      <div className="flex-1 p-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="mb-6">
+            <h1 className="text-3xl font-bold text-gray-900 mb-2">{creativePortfolio.title}</h1>
+            <p className="text-gray-600 mb-4">{creativePortfolio.description}</p>
+          </div>
+
+          <div className="flex flex-col items-center gap-4">
+            <div className="w-full border rounded-lg overflow-hidden shadow-md" style={{ height: 560 }}>
+              <iframe
+                title="Creative Portfolio"
+                src={pdfSrc}
+                className="w-full h-full"
+                aria-label="Creative portfolio pdf viewer"
+              />
+            </div>
+
+            <div className="flex items-center gap-3 mt-2">
+              <a
+                href={pdfSrc}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="ml-4 text-blue-600 hover:underline text-sm"
+              >
+                Open full PDF
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    )
+  }
+
   return null
 }
 
 // Export projects data for sidebar
 export { projects }
+export { creativePortfolio }

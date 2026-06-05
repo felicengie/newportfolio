@@ -30,6 +30,12 @@ const workTabs = [
     label: "Tech Education",
     icon: "👩‍🏫"
   }
+  ,
+  {
+    id: "creative-side",
+    label: "Creative Portfolio",
+    icon: "🎨"
+  }
 ]
 
 export function WorkSidebar({ activeTab, onTabChange, projects = [] }: WorkSidebarProps) {
