@@ -35,6 +35,11 @@ const workTabs = [
     id: "creative-side",
     label: "Creative Portfolio",
     icon: "🎨"
+  },
+  {
+    id: "research-side",
+    label: "Research Publications",
+    icon: "🔎"
   }
 ]
 

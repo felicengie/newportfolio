@@ -224,6 +224,31 @@ const creativePortfolio = {
   description: "my creative side"
 }
 
+// --------- Research Data ---------
+// Research Papers published
+const researchPapers: WorkData = {
+  id: "research-side",
+  title: "Research Publications",
+  description: "Published research in critical care medicine",
+  papers: [
+    {
+      title:
+        "Hemoglobin trends and transfusion practices after cardiac arrest: a cohort study",
+      journal: "Journal of Intensive Care",
+      year: 2026,
+      role: "Data Analyst",
+      contribution:
+        "Pulled and prepared clinical data from hospital databases, supported cohort development and data cleaning, and analyzed hemoglobin trends and transfusion practices following cardiac arrest.",
+      pubmed:
+        "https://pubmed.ncbi.nlm.nih.gov/42881421/",
+      springer:
+        "https://link.springer.com/article/10.1186/s40560-026-00952-w",
+      description:
+        "This study examines post-cardiac arrest hemoglobin trends and red blood cell transfusion practices over 30 days, highlighting variation in transfusion thresholds and the association between hemoglobin levels and in-hospital mortality."
+    }
+  ]
+};
+
 
 // --------- Section Component ---------
 const Section = ({ title, content }: { title: string, content: React.ReactNode }) => (
@@ -463,6 +488,80 @@ export function WorkContent({ activeTab }: WorkContentProps) {
       </div>
     )
   }
+
+  
+if (activeTab === "research-side") {
+  return (
+    <div className="flex-1 p-8">
+      <div className="max-w-4xl mx-auto">
+        <div className="mb-8">
+          <h1 className="text-3xl font-bold text-gray-900 mb-3">
+            {researchPapers.title}
+          </h1>
+          <p className="text-gray-600">
+            {researchPapers.description}
+          </p>
+        </div>
+
+        {researchPapers.papers.map((paper) => (
+          <article
+            key={paper.pubmed}
+            className="border border-gray-200 rounded-xl p-6 md:p-8 mb-6"
+          >
+            <p className="text-sm text-gray-500 mb-3">
+              {paper.journal} · {paper.year}
+            </p>
+
+            <h2 className="text-xl md:text-2xl font-semibold text-gray-900 mb-5">
+              {paper.title}
+            </h2>
+
+            <div className="mb-6">
+              <span className="inline-block px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-sm font-medium">
+                {paper.role}
+              </span>
+            </div>
+
+            <h3 className="font-semibold text-gray-900 mb-2">
+              My Contribution
+            </h3>
+            <p className="text-gray-600 leading-7 mb-6">
+              {paper.contribution}
+            </p>
+
+            <h3 className="font-semibold text-gray-900 mb-2">
+              About the Study
+            </h3>
+            <p className="text-gray-600 leading-7 mb-6">
+              {paper.description}
+            </p>
+
+            <div className="flex flex-wrap gap-3">
+              <a
+                href={paper.pubmed}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center rounded-lg bg-blue-600 px-4 py-2.5 text-white text-sm font-medium hover:bg-blue-700"
+              >
+                Read on PubMed ↗
+              </a>
+
+              <a
+                href={paper.springer}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center rounded-lg border border-gray-300 px-4 py-2.5 text-gray-700 text-sm font-medium hover:bg-gray-50"
+              >
+                Read on Springer ↗
+              </a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  )
+}
+
 
   return null
 }
