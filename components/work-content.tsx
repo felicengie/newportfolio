@@ -226,7 +226,7 @@ const creativePortfolio = {
 
 // --------- Research Data ---------
 // Research Papers published
-const researchPapers: WorkData = {
+const researchPapers = {
   id: "research-side",
   title: "Research Publications",
   description: "Published research in critical care medicine",
@@ -238,7 +238,7 @@ const researchPapers: WorkData = {
       year: 2026,
       role: "Data Analyst",
       contribution:
-        "Pulled and prepared clinical data from hospital databases, supported cohort development and data cleaning, and analyzed hemoglobin trends and transfusion practices following cardiac arrest.",
+        "Pulled and prepared clinical data from ePIC Clarity database (EDW, Caboodle), supported cohort development and data cleaning",
       pubmed:
         "https://pubmed.ncbi.nlm.nih.gov/42881421/",
       springer:
